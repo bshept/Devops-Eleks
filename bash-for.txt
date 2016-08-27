@@ -1,3 +1,87 @@
+--------------------------------------------
+$ cat for1.sh
+i=1
+for day in Mon Tue Wed Thu Fri
+do
+ echo "Weekday $((i++)) : $day"
+done
+
+$ ./for1.sh
+Weekday 1 : Mon
+Weekday 2 : Tue
+Weekday 3 : Wed
+Weekday 4 : Thu
+Weekday 5 : Fri
+---------------------------------------------
+---------------------------------------------
+$ cat for2.sh
+i=1
+weekdays="Mon Tue Wed Thu Fri"
+for day in $weekdays
+do
+ echo "Weekday $((i++)) : $day"
+done
+
+$ ./for2.sh
+Weekday 1 : Mon
+Weekday 2 : Tue
+Weekday 3 : Wed
+Weekday 4 : Thu
+Weekday 5 : Fri
+------------------------------------
+$ cat for7.sh
+i=1
+for day in Mon Tue Wed Thu Fri Sat Sun
+do
+ echo -n "Day $((i++)) : $day"
+ if [ $i -eq 7 -o $i -eq 8 ]; then
+   echo " (WEEKEND)"
+   continue;
+ fi
+ echo " (weekday)"
+done
+
+$ ./for7.sh
+Day 1 : Mon (weekday)
+Day 2 : Tue (weekday)
+Day 3 : Wed (weekday)
+Day 4 : Thu (weekday)
+Day 5 : Fri (weekday)
+Day 6 : Sat (WEEKEND)
+Day 7 : Sun (WEEKEND)
+
+----------------------------------------
+
+C styl
+
+$ cat for8.sh
+for (( i=1; i <= 5; i++ ))
+do
+ echo "Random number $i: $RANDOM"
+done
+
+$ ./for8.sh
+Random number 1: 23320
+Random number 2: 5070
+Random number 3: 15202
+Random number 4: 23861
+Random number 5: 23435
+-----------------------------------------
+
+$ cat for10.sh
+for ((i=1, j=10; i <= 5 ; i++, j=j+5))
+do
+ echo "Number $i: $j"
+done
+
+$ ./for10.sh
+Number 1: 10
+Number 2: 15
+Number 3: 20
+Number 4: 25
+Number 5: 30
+
+---------------------------------------
 Prostuy
 -------------------------------------
 declare -a b=(a b c)
