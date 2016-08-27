@@ -1,0 +1,22 @@
+Prostuy
+-------------------------------------
+declare -a b=(a b c)
+for i in ${b[@]}; do echo "$i"; done
+a
+b
+c
+
+-------------------------------------
+
+Cukl tupy C
+-------------------------------------
+declare -a a=(w s x)
+aLenght=${#a[@]}
+echo $aLenght
+3
+for ((i=0; i<=$aLenght; i++)); do echo ${a[$i]}; done
+w
+s
+x
+
+--------------------------------------
