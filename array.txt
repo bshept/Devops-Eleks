@@ -1,0 +1,40 @@
+ogoloshenna
+a=(1 2 3)
+
+Dodaty element
+a[3]=4
+
+Vuvid elementa 
+echo ${a[1]}
+
+Vuviv vsogo masuvy
+echo ${a[@]}
+
+Duklaraciya
+declare -a b=(a b c)
+
+Vuznachennay dovjunu
+echo ${#a[@]}
+
+Vuznachenny dovjunu elementa masuvy
+declare -a b=(aaaa bbbbb ccccc)
+echo ${#a[1]}
+
+Dodaty element do masyvy
+b=("${b[@]}" "dddd")
+echo ${b[@]}
+
+Vydalutu element
+unset b ---- vudalut ves masuv b
+unset b[3] - vydalut element z indeksom 3
+
+Kopiyuvannay masuvy------------
+Unix=('Debian' 'openSUSE' 'CentOS' 'Redhat');
+Linux=("${Unix[@]}")
+echo ${Linux[@]}
+
+Dodavannya masyviv
+a=(a b c)
+b=(c d e)
+q=("${a[@]}" "${b[@]}")
+echo ${q[@]}
