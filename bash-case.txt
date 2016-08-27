@@ -1,0 +1,13 @@
+#!/bin/bash
+
+var1=Vasya
+
+case $var1 in
+    vasya )
+        echo 1  $var1;;
+    Vasya )
+        echo 2  $var1;;
+    Andriy )
+        echo 3  $var1;;
+  *) echo Shos inshe;;
+esac

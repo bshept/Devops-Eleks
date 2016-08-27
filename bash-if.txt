@@ -1,0 +1,54 @@
+-----------------------------
+#!/bin/bash
+if [ 11 -lt 2 ]; then
+    echo "true"
+else
+    echo "folse"
+
+fi
+-----------------------------
+
+#!/bin/bash
+
+var1=11
+if [ $var1 -lt 2 ]; then
+    echo "true"
+elif [ $var1 -gt 1 ]; then
+    echo "super"
+elif [ $var1 -eq 11 ]; then
+    echo "folse"
+
+fi
+------------------------------
+
+#!/bin/bash
+
+var1=11
+if [ $var1 -lt 2 ]; then
+    echo "true"
+elif [ $var1 -lt 1 ]; then
+    echo "super"
+elif [ $var1 -eq 11 ]; then
+    echo "folse"
+        if [ $var1 -lt 22 ]; then
+           echo $var1
+        fi
+
+fi
+
+------------------------------------------------------------
+|| -- або
+if [[ $var1 -lt 10 ]] || [[ $var1 -lt 2 ]]; then echo ok; fi
+
+if [[ $var1 -gt 10 ]] || [[ $var1 -eq 1 ]]; then echo ok; fi
+
+------------------------------------------------------------
+&& -- i
+if [[ $var1 -lt 10 ]] && [[ $var1 -eq 1 ]]; then echo ok; fi
+
+
+
+
+
+
+
